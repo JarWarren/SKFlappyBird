@@ -23,6 +23,7 @@ class GameScene: SKScene {
         background.setUp()
         pipes.forEach { $0.setUp(delegate: self) }
         ground.setUp()
+        bird.setUp()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
