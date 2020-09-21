@@ -11,23 +11,23 @@ class Bird: SKSpriteNode {
 
     private var maximumVelocity: CGFloat = 18
     private var upwardMomentum: CGFloat = 0
+    var isAlive = true
     
     func setUp() {
         
     }
     
     func flap() {
+        guard isAlive else { return }
         upwardMomentum = maximumVelocity
-    }
-    
-    func die() {
-        
     }
     
     func update() {
         if upwardMomentum > -maximumVelocity {
             upwardMomentum -= 1
         }
-        position.y += upwardMomentum
+        if position.y >= -380 {
+            position.y += upwardMomentum
+        }
     }
 }

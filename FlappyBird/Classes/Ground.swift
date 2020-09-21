@@ -11,6 +11,7 @@ class Ground: SKNode {
 
     private var segments = [SKSpriteNode]()
     private var leadSegment = 0
+    var shouldUpdate = true
     
     func setUp() {
         segments = [childNode(withName: "Segment0") as! SKSpriteNode,
@@ -19,6 +20,7 @@ class Ground: SKNode {
     }
     
     func update() {
+        guard shouldUpdate else { return }
         segments.forEach { $0.position.x -= 3 }
         if segments[leadSegment].position.x <= -820 {
             segments[leadSegment].position.x += segments[leadSegment].size.width * 3

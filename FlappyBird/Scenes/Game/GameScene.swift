@@ -46,6 +46,8 @@ extension GameScene: PipeDelegate {
 
 extension GameScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
-        pause()
+        ground.shouldUpdate = false
+        pipes.forEach { $0.shouldUpdate = false }
+        bird.isAlive = false
     }
 }
