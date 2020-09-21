@@ -26,6 +26,7 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        physicsWorld.contactDelegate = self
         bird.flap()
     }
     
@@ -40,5 +41,11 @@ extension GameScene: PipeDelegate {
     func pipeDidPassCenterScreen() {
         score += 1
         print(score)
+    }
+}
+
+extension GameScene: SKPhysicsContactDelegate {
+    func didBegin(_ contact: SKPhysicsContact) {
+        pause()
     }
 }
