@@ -12,6 +12,7 @@ class GameScene: SKScene {
     
     private lazy var background: Background = childNode(withName: "Background") as! Background
     private lazy var ground: Ground = childNode(withName: "Ground") as! Ground
+    private lazy var bird: Bird = childNode(withName: "Bird") as! Bird
     private lazy var pipes: [Pipe] = [childNode(withName: "Pipe0") as! Pipe,
                                       childNode(withName: "Pipe1") as! Pipe,
                                       childNode(withName: "Pipe2") as! Pipe]
@@ -25,12 +26,13 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print(pipes[0].position.x - pipes[1].position.x)
+        bird.flap()
     }
     
     override func update(_ currentTime: TimeInterval) {
         pipes.forEach { $0.update() }
         ground.update()
+        bird.update()
     }
 }
 
