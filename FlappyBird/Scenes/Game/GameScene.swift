@@ -13,17 +13,17 @@ class GameScene: SKScene {
     private lazy var background: Background = childNode(withName: "Background") as! Background
     private lazy var ground: Ground = childNode(withName: "Ground") as! Ground
     private lazy var bird: Bird = childNode(withName: "Bird") as! Bird
+    private lazy var score: Score = childNode(withName: "Score") as! Score
     private lazy var pipes: [Pipe] = [childNode(withName: "Pipe0") as! Pipe,
                                       childNode(withName: "Pipe1") as! Pipe,
                                       childNode(withName: "Pipe2") as! Pipe]
-    
-    var score = 0
     
     override func didMove(to view: SKView) {
         background.setUp()
         pipes.forEach { $0.setUp(delegate: self) }
         ground.setUp()
         bird.setUp()
+        score.setUp()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -40,8 +40,7 @@ class GameScene: SKScene {
 
 extension GameScene: PipeDelegate {
     func pipeDidPassCenterScreen() {
-        score += 1
-        print(score)
+        score.update()
     }
 }
 

@@ -19,6 +19,7 @@
 		7EC5732F2518830400BE760C /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5732E2518830400BE760C /* Ground.swift */; };
 		7EC573342518890000BE760C /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC573332518890000BE760C /* Background.swift */; };
 		7EC5733925188B3700BE760C /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5733825188B3700BE760C /* Bird.swift */; };
+		7EC5737525196A4F00BE760C /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5737425196A4F00BE760C /* Score.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7EC5732E2518830400BE760C /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		7EC573332518890000BE760C /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		7EC5733825188B3700BE760C /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
+		7EC5737425196A4F00BE760C /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				7EC5732E2518830400BE760C /* Ground.swift */,
 				7EC573332518890000BE760C /* Background.swift */,
 				7EC5733825188B3700BE760C /* Bird.swift */,
+				7EC5737425196A4F00BE760C /* Score.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				7EC572FB2518689000BE760C /* AppDelegate.swift in Sources */,
 				7EC5732B25186E8F00BE760C /* Consatnts.swift in Sources */,
 				7EC5733925188B3700BE760C /* Bird.swift in Sources */,
+				7EC5737525196A4F00BE760C /* Score.swift in Sources */,
 				7EC5732625186DB000BE760C /* Pipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
