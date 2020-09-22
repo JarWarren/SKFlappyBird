@@ -39,7 +39,7 @@ class GameScene: SKScene {
 }
 
 extension GameScene: PipeDelegate {
-    func pipeDidPassCenterScreen() {
+    func pipeDidScore() {
         score.update()
     }
 }

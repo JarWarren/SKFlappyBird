@@ -21,7 +21,7 @@ class Ground: SKNode {
     
     func update() {
         guard shouldUpdate else { return }
-        segments.forEach { $0.position.x -= 3 }
+        segments.forEach { $0.position.x -= Constants.gameSpeed }
         if segments[leadSegment].position.x <= -820 {
             segments[leadSegment].position.x += segments[leadSegment].size.width * 3
             updateLeadSegment()

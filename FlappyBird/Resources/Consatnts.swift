@@ -8,6 +8,5 @@
 import SpriteKit
 
 enum Constants {
-    private static let atlas = SKTextureAtlas(named: "Sprites")
-    
+    static let gameSpeed: CGFloat = 4
 }
