@@ -8,25 +8,9 @@
 import SpriteKit
 
 class Ground: SKNode {
-
     private var segments = [SKSpriteNode]()
     private var leadSegment = 0
-    var shouldUpdate = true
-    
-    func setUp() {
-        segments = [childNode(withName: "Segment0") as! SKSpriteNode,
-                    childNode(withName: "Segment1") as! SKSpriteNode,
-                    childNode(withName: "Segment2") as! SKSpriteNode]
-    }
-    
-    func update() {
-        guard shouldUpdate else { return }
-        segments.forEach { $0.position.x -= 3 }
-        if segments[leadSegment].position.x <= -820 {
-            segments[leadSegment].position.x += segments[leadSegment].size.width * 3
-            updateLeadSegment()
-        }
-    }
+    private var shouldUpdate = true
     
     private func updateLeadSegment() {
         leadSegment += 1
@@ -35,4 +19,25 @@ class Ground: SKNode {
         }
     }
     
+}
+
+extension Ground: GameObject {
+    func setUp() {
+        segments = [childNode(withName: "Segment0") as! SKSpriteNode,
+                    childNode(withName: "Segment1") as! SKSpriteNode,
+                    childNode(withName: "Segment2") as! SKSpriteNode]
+    }
+    
+    func update() {
+        guard shouldUpdate else { return }
+        segments.forEach { $0.position.x -= 4 }
+        if segments[leadSegment].position.x <= -820 {
+            segments[leadSegment].position.x += segments[leadSegment].size.width * 3
+            updateLeadSegment()
+        }
+    }
+    
+    func changeState(to state: GameState) {
+        shouldUpdate = state != .gameOver
+    }
 }

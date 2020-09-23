@@ -8,27 +8,33 @@
 import SpriteKit
 
 protocol PipeDelegate: AnyObject {
-    func pipeDidPassCenterScreen()
+    func pipeDidScore()
 }
 
 class Pipe: SKNode {
+    private var hasScored = false
+    private var shouldUpdate = true
+    weak var delegate: PipeDelegate?
     
-    private weak var delegate: PipeDelegate?
-    private var hasPassedCenter = false
-    var shouldUpdate = true
-    
-    func setUp(delegate: PipeDelegate) {
-        self.delegate = delegate
+    private func reset() {
+        position.x += 1080
+        position.y = CGFloat.random(in: -80...240)
+        hasScored = false
+    }
+}
+
+extension Pipe: GameObject {
+    func setUp() {
         reset()
     }
 
     func update() {
         guard shouldUpdate else { return }
-        position.x -= 3
+        position.x -= 4
         
-        if !hasPassedCenter && position.x <= 0 {
-            hasPassedCenter = true
-            delegate?.pipeDidPassCenterScreen()
+        if !hasScored && position.x <= -160 {
+            hasScored = true
+            delegate?.pipeDidScore()
         }
         
         if position.x <= -640 {
@@ -36,9 +42,12 @@ class Pipe: SKNode {
         }
     }
     
-    private func reset() {
-        position.x += 1080
-        position.y = CGFloat.random(in: -80...240)
-        hasPassedCenter = false
+    func changeState(to state: GameState) {
+        if state == .playing {
+            reset()
+            shouldUpdate = true
+        } else {
+            shouldUpdate = false
+        }
     }
 }

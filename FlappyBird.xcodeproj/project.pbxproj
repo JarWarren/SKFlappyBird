@@ -7,21 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EBCD035251ADA7800EAE987 /* SKScene+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCD034251ADA7800EAE987 /* SKScene+Extension.swift */; };
+		7EBCD04D251B173100EAE987 /* point.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCD048251B173000EAE987 /* point.wav */; };
+		7EBCD04E251B173100EAE987 /* hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCD049251B173100EAE987 /* hit.wav */; };
+		7EBCD04F251B173100EAE987 /* swoosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCD04A251B173100EAE987 /* swoosh.wav */; };
+		7EBCD050251B173100EAE987 /* wing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCD04B251B173100EAE987 /* wing.wav */; };
+		7EBCD051251B173100EAE987 /* die.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCD04C251B173100EAE987 /* die.wav */; };
+		7EBCD054251B177500EAE987 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCD053251B177500EAE987 /* Launch.storyboard */; };
 		7EC572FB2518689000BE760C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC572FA2518689000BE760C /* AppDelegate.swift */; };
 		7EC572FD2518689000BE760C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7EC572FC2518689000BE760C /* GameScene.sks */; };
 		7EC573012518689000BE760C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC573002518689000BE760C /* GameScene.swift */; };
 		7EC573032518689000BE760C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC573022518689000BE760C /* GameViewController.swift */; };
 		7EC573062518689000BE760C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC573042518689000BE760C /* Main.storyboard */; };
 		7EC573082518689100BE760C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC573072518689100BE760C /* Assets.xcassets */; };
-		7EC573112518690700BE760C /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 7EC573102518690700BE760C /* Audio */; };
 		7EC5732625186DB000BE760C /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5732525186DB000BE760C /* Pipe.swift */; };
-		7EC5732B25186E8F00BE760C /* Consatnts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5732A25186E8F00BE760C /* Consatnts.swift */; };
 		7EC5732F2518830400BE760C /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5732E2518830400BE760C /* Ground.swift */; };
 		7EC573342518890000BE760C /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC573332518890000BE760C /* Background.swift */; };
 		7EC5733925188B3700BE760C /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5733825188B3700BE760C /* Bird.swift */; };
+		7EC5737525196A4F00BE760C /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5737425196A4F00BE760C /* Score.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7EBCD034251ADA7800EAE987 /* SKScene+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+Extension.swift"; sourceTree = "<group>"; };
+		7EBCD048251B173000EAE987 /* point.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = point.wav; sourceTree = "<group>"; };
+		7EBCD049251B173100EAE987 /* hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hit.wav; sourceTree = "<group>"; };
+		7EBCD04A251B173100EAE987 /* swoosh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = swoosh.wav; sourceTree = "<group>"; };
+		7EBCD04B251B173100EAE987 /* wing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wing.wav; sourceTree = "<group>"; };
+		7EBCD04C251B173100EAE987 /* die.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = die.wav; sourceTree = "<group>"; };
+		7EBCD053251B177500EAE987 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		7EC572F72518689000BE760C /* FlappyBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC572FA2518689000BE760C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC572FC2518689000BE760C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -30,12 +43,11 @@
 		7EC573052518689000BE760C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EC573072518689100BE760C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EC573092518689100BE760C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EC573102518690700BE760C /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Audio; sourceTree = "<group>"; };
 		7EC5732525186DB000BE760C /* Pipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipe.swift; sourceTree = "<group>"; };
-		7EC5732A25186E8F00BE760C /* Consatnts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consatnts.swift; sourceTree = "<group>"; };
 		7EC5732E2518830400BE760C /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		7EC573332518890000BE760C /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		7EC5733825188B3700BE760C /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
+		7EC5737425196A4F00BE760C /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +61,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7EBCD047251B171700EAE987 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				7EBCD04C251B173100EAE987 /* die.wav */,
+				7EBCD049251B173100EAE987 /* hit.wav */,
+				7EBCD048251B173000EAE987 /* point.wav */,
+				7EBCD04A251B173100EAE987 /* swoosh.wav */,
+				7EBCD04B251B173100EAE987 /* wing.wav */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		7EC572EE2518689000BE760C = {
 			isa = PBXGroup;
 			children = (
@@ -68,9 +92,9 @@
 		7EC572F92518689000BE760C /* FlappyBird */ = {
 			isa = PBXGroup;
 			children = (
-				7EC5731925186C5000BE760C /* UI */,
 				7EC5732825186DC500BE760C /* Classes */,
-				7EC5731825186C3D00BE760C /* Scenes */,
+				7EC5731C25186CBA00BE760C /* GameScene */,
+				7EC5731925186C5000BE760C /* UI */,
 				7EC5731525186A7E00BE760C /* Resources */,
 			);
 			path = FlappyBird;
@@ -79,22 +103,14 @@
 		7EC5731525186A7E00BE760C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7EBCD047251B171700EAE987 /* Audio */,
 				7EC572FA2518689000BE760C /* AppDelegate.swift */,
 				7EC573072518689100BE760C /* Assets.xcassets */,
-				7EC573102518690700BE760C /* Audio */,
 				7EC573092518689100BE760C /* Info.plist */,
-				7EC5732A25186E8F00BE760C /* Consatnts.swift */,
+				7EBCD034251ADA7800EAE987 /* SKScene+Extension.swift */,
+				7EBCD053251B177500EAE987 /* Launch.storyboard */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		7EC5731825186C3D00BE760C /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				7EC5731E25186CC700BE760C /* StartMenu */,
-				7EC5731C25186CBA00BE760C /* Game */,
-			);
-			path = Scenes;
 			sourceTree = "<group>";
 		};
 		7EC5731925186C5000BE760C /* UI */ = {
@@ -106,20 +122,13 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		7EC5731C25186CBA00BE760C /* Game */ = {
+		7EC5731C25186CBA00BE760C /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
 				7EC572FC2518689000BE760C /* GameScene.sks */,
 				7EC573002518689000BE760C /* GameScene.swift */,
 			);
-			path = Game;
-			sourceTree = "<group>";
-		};
-		7EC5731E25186CC700BE760C /* StartMenu */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StartMenu;
+			path = GameScene;
 			sourceTree = "<group>";
 		};
 		7EC5732825186DC500BE760C /* Classes */ = {
@@ -129,6 +138,7 @@
 				7EC5732E2518830400BE760C /* Ground.swift */,
 				7EC573332518890000BE760C /* Background.swift */,
 				7EC5733825188B3700BE760C /* Bird.swift */,
+				7EC5737425196A4F00BE760C /* Score.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -192,9 +202,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EC573062518689000BE760C /* Main.storyboard in Resources */,
+				7EBCD04F251B173100EAE987 /* swoosh.wav in Resources */,
+				7EBCD050251B173100EAE987 /* wing.wav in Resources */,
+				7EBCD054251B177500EAE987 /* Launch.storyboard in Resources */,
 				7EC572FD2518689000BE760C /* GameScene.sks in Resources */,
-				7EC573112518690700BE760C /* Audio in Resources */,
+				7EBCD04E251B173100EAE987 /* hit.wav in Resources */,
+				7EBCD051251B173100EAE987 /* die.wav in Resources */,
 				7EC573082518689100BE760C /* Assets.xcassets in Resources */,
+				7EBCD04D251B173100EAE987 /* point.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,9 +245,10 @@
 				7EC573342518890000BE760C /* Background.swift in Sources */,
 				7EC573012518689000BE760C /* GameScene.swift in Sources */,
 				7EC573032518689000BE760C /* GameViewController.swift in Sources */,
+				7EBCD035251ADA7800EAE987 /* SKScene+Extension.swift in Sources */,
 				7EC572FB2518689000BE760C /* AppDelegate.swift in Sources */,
-				7EC5732B25186E8F00BE760C /* Consatnts.swift in Sources */,
 				7EC5733925188B3700BE760C /* Bird.swift in Sources */,
+				7EC5737525196A4F00BE760C /* Score.swift in Sources */,
 				7EC5732625186DB000BE760C /* Pipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
