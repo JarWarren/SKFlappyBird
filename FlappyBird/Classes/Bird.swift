@@ -10,7 +10,7 @@ import SpriteKit
 class Bird: SKSpriteNode {
 
     private var flapSound: SKAction { .playSoundFileNamed("wing.wav", waitForCompletion: false) }
-    private var fallingSound: SKAction { .playSoundFileNamed("die.wav", waitForCompletion: false) }
+    private var deathSound: SKAction { .playSoundFileNamed("die.wav", waitForCompletion: false) }
     private var maximumUpwardVelocity: CGFloat = 18
     private var upwardVelocity: CGFloat = 0
     private var maximumAngularVelocity: CGFloat = 1
@@ -39,7 +39,6 @@ class Bird: SKSpriteNode {
     func fall() {
         texture = self.textures[1]
         run(.rotate(toAngle: -1.57, duration: 0.36))
-        run(fallingSound)
     }
 }
 
@@ -66,13 +65,18 @@ extension Bird: GameObject {
     func changeState(to state: GameState) {
         self.state = state
         removeAllActions()
-        isAlive = state != .gameOver
-        if state == .ready {
+        switch state {
+        case .ready:
+            isAlive = true
             fly()
-        } else if state == .playing {
+        case .playing:
             flap()
-        } else if state == .gameOver {
+        case .gameOver:
+            isAlive = false
             fall()
+            if position.y >= 300 {
+                run(deathSound)
+            }
         }
     }
 }

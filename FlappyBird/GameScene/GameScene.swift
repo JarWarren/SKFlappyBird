@@ -112,6 +112,7 @@ extension GameScene: PipeDelegate {
 
 extension GameScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
+        guard gameState != .gameOver else { return }
         self.gameState = .gameOver
         run(collisionSound)
         onCooldown = true

@@ -13,7 +13,7 @@ protocol PipeDelegate: AnyObject {
 
 class Pipe: SKNode {
     private var hasScored = false
-    private var shouldUpdate = true
+    private var shouldUpdate = false
     weak var delegate: PipeDelegate?
     
     private func reset() {
