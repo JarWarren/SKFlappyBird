@@ -22,6 +22,7 @@ protocol GameObject: AnyObject {
 
 class GameScene: SKScene {
     
+    private var onCooldown = false
     private var collisionSound: SKAction { .playSoundFileNamed("hit.wav", waitForCompletion: false) }
     private var scoreSound: SKAction { .playSoundFileNamed("point.wav", waitForCompletion: false) }
     private var swooshSound: SKAction { .playSoundFileNamed("swoosh.wav", waitForCompletion: false) }
@@ -54,6 +55,7 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard !onCooldown else { return }
         switch gameState {
         case .ready:
             gameState = .playing
@@ -112,5 +114,9 @@ extension GameScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         self.gameState = .gameOver
         run(collisionSound)
+        onCooldown = true
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (_) in
+            self.onCooldown = false
+        }
     }
 }

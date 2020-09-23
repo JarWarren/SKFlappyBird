@@ -26,8 +26,7 @@ class Bird: SKSpriteNode {
         zRotation = 0.7
         run(flapSound)
         run(.repeat(.animate(with: textures, timePerFrame: 0.06), count: 2)) {
-            self.texture = self.textures[1]
-            self.run(.rotate(toAngle: -1.57, duration: 0.36))
+            self.fall()
         }
     }
     
@@ -35,6 +34,12 @@ class Bird: SKSpriteNode {
         position.y = 0
         zRotation = 0
         run(.repeatForever(.animate(with: textures, timePerFrame: 0.1)))
+    }
+    
+    func fall() {
+        texture = self.textures[1]
+        run(.rotate(toAngle: -1.57, duration: 0.36))
+        run(fallingSound)
     }
 }
 
@@ -67,7 +72,7 @@ extension Bird: GameObject {
         } else if state == .playing {
             flap()
         } else if state == .gameOver {
-            run(fallingSound)
+            fall()
         }
     }
 }
