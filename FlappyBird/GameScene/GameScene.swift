@@ -22,6 +22,9 @@ protocol GameObject: AnyObject {
 
 class GameScene: SKScene {
     
+    private var collisionSound: SKAction { .playSoundFileNamed("hit.wav", waitForCompletion: false) }
+    private var scoreSound: SKAction { .playSoundFileNamed("point.wav", waitForCompletion: false) }
+    private var swooshSound: SKAction { .playSoundFileNamed("swoosh.wav", waitForCompletion: false) }
     private lazy var background = childNode(withName: "Background") as! Background
     private lazy var readyMessage = childNode(withName: "Message") as! SKSpriteNode
     private lazy var gameOverMessage = childNode(withName: "GameOver") as! SKSpriteNode
@@ -69,6 +72,7 @@ class GameScene: SKScene {
     }
     
     private func readyGame() {
+        run(swooshSound)
         readyMessage.isHidden = false
         gameOverMessage.isHidden = true
         background.setUp()
@@ -84,6 +88,7 @@ class GameScene: SKScene {
     }
     
     private func endGame() {
+        run(swooshSound)
         readyMessage.isHidden = true
         gameOverMessage.isHidden = false
     }
@@ -99,11 +104,13 @@ class GameScene: SKScene {
 extension GameScene: PipeDelegate {
     func pipeDidScore() {
         score.update()
+        run(scoreSound)
     }
 }
 
 extension GameScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         self.gameState = .gameOver
+        run(collisionSound)
     }
 }

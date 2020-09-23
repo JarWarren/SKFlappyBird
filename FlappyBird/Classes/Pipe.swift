@@ -30,7 +30,7 @@ extension Pipe: GameObject {
 
     func update() {
         guard shouldUpdate else { return }
-        position.x -= Constants.gameSpeed
+        position.x -= 4
         
         if !hasScored && position.x <= -160 {
             hasScored = true

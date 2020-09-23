@@ -9,6 +9,8 @@ import SpriteKit
 
 class Bird: SKSpriteNode {
 
+    private var flapSound: SKAction { .playSoundFileNamed("wing.wav", waitForCompletion: false) }
+    private var fallingSound: SKAction { .playSoundFileNamed("die.wav", waitForCompletion: false) }
     private var maximumUpwardVelocity: CGFloat = 18
     private var upwardVelocity: CGFloat = 0
     private var maximumAngularVelocity: CGFloat = 1
@@ -22,6 +24,7 @@ class Bird: SKSpriteNode {
         removeAllActions()
         upwardVelocity = maximumUpwardVelocity
         zRotation = 0.7
+        run(flapSound)
         run(.repeat(.animate(with: textures, timePerFrame: 0.06), count: 2)) {
             self.texture = self.textures[1]
             self.run(.rotate(toAngle: -1.57, duration: 0.36))
@@ -63,6 +66,8 @@ extension Bird: GameObject {
             fly()
         } else if state == .playing {
             flap()
+        } else if state == .gameOver {
+            run(fallingSound)
         }
     }
 }

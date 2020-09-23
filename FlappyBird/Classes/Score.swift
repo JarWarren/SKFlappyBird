@@ -51,6 +51,8 @@ extension Score: GameObject {
         if state == .ready {
             score = -1
             update()
+        } else if state == .gameOver {
+            firstDigit?.position.x = firstDigitOriginalXPosition
         }
     }
 }
