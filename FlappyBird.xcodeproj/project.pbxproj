@@ -72,9 +72,9 @@
 		7EC572F92518689000BE760C /* FlappyBird */ = {
 			isa = PBXGroup;
 			children = (
-				7EC5731925186C5000BE760C /* UI */,
 				7EC5732825186DC500BE760C /* Classes */,
-				7EC5731825186C3D00BE760C /* Scenes */,
+				7EC5731C25186CBA00BE760C /* GameScene */,
+				7EC5731925186C5000BE760C /* UI */,
 				7EC5731525186A7E00BE760C /* Resources */,
 			);
 			path = FlappyBird;
@@ -93,14 +93,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		7EC5731825186C3D00BE760C /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				7EC5731C25186CBA00BE760C /* Game */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		7EC5731925186C5000BE760C /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,13 +102,13 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		7EC5731C25186CBA00BE760C /* Game */ = {
+		7EC5731C25186CBA00BE760C /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
 				7EC572FC2518689000BE760C /* GameScene.sks */,
 				7EC573002518689000BE760C /* GameScene.swift */,
 			);
-			path = Game;
+			path = GameScene;
 			sourceTree = "<group>";
 		};
 		7EC5732825186DC500BE760C /* Classes */ = {

@@ -27,6 +27,7 @@ class Score: SKNode {
 
 extension Score: GameObject {
     func setUp() {
+        isHidden = true
         firstDigitOriginalXPosition = firstDigit?.position.x ?? 0
         firstDigit?.position.x = 0
         secondDigit?.isHidden = true
@@ -46,9 +47,10 @@ extension Score: GameObject {
     }
     
     func changeState(to state: GameState) {
-        isHidden = state == .playing
+        isHidden = state != .playing
         if state == .ready {
-            score = 0
+            score = -1
+            update()
         }
     }
 }
