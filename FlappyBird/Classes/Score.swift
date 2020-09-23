@@ -12,7 +12,6 @@ class Score: SKNode {
     private var score = 0
     private lazy var firstDigit = childNode(withName: "FirstDigit") as? SKSpriteNode
     private lazy var secondDigit = childNode(withName: "SecondDigit") as? SKSpriteNode
-    private var firstDigitOriginalXPosition: CGFloat = 0
     private let textures = [SKTexture(imageNamed: "0"),
                             SKTexture(imageNamed: "1"),
                             SKTexture(imageNamed: "2"),
@@ -28,7 +27,6 @@ class Score: SKNode {
 extension Score: GameObject {
     func setUp() {
         isHidden = true
-        firstDigitOriginalXPosition = firstDigit?.position.x ?? 0
         firstDigit?.position.x = 0
         secondDigit?.isHidden = true
     }
@@ -37,7 +35,7 @@ extension Score: GameObject {
         score += 1
         if score > 9 {
             secondDigit?.isHidden = false
-            firstDigit?.position.x = firstDigitOriginalXPosition
+            firstDigit?.position.x = -34
             firstDigit?.texture = textures[score / 10]
             secondDigit?.texture = textures[score % 10]
         } else {
@@ -47,12 +45,11 @@ extension Score: GameObject {
     }
     
     func changeState(to state: GameState) {
-        isHidden = state != .playing
+        isHidden = state == .ready
         if state == .ready {
             score = -1
+            firstDigit?.position.x = 0
             update()
-        } else if state == .gameOver {
-            firstDigit?.position.x = firstDigitOriginalXPosition
         }
     }
 }

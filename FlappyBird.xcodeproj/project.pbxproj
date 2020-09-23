@@ -107,7 +107,6 @@
 				7EC572FA2518689000BE760C /* AppDelegate.swift */,
 				7EC573072518689100BE760C /* Assets.xcassets */,
 				7EC573092518689100BE760C /* Info.plist */,
-				7EBCD034251ADA7800EAE987 /* SKScene+Extension.swift */,
 				7EBCD053251B177500EAE987 /* Launch.storyboard */,
 			);
 			path = Resources;
@@ -127,6 +126,7 @@
 			children = (
 				7EC572FC2518689000BE760C /* GameScene.sks */,
 				7EC573002518689000BE760C /* GameScene.swift */,
+				7EBCD034251ADA7800EAE987 /* SKScene+Extension.swift */,
 			);
 			path = GameScene;
 			sourceTree = "<group>";
@@ -134,10 +134,10 @@
 		7EC5732825186DC500BE760C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7EC5732525186DB000BE760C /* Pipe.swift */,
-				7EC5732E2518830400BE760C /* Ground.swift */,
 				7EC573332518890000BE760C /* Background.swift */,
 				7EC5733825188B3700BE760C /* Bird.swift */,
+				7EC5732E2518830400BE760C /* Ground.swift */,
+				7EC5732525186DB000BE760C /* Pipe.swift */,
 				7EC5737425196A4F00BE760C /* Score.swift */,
 			);
 			path = Classes;
