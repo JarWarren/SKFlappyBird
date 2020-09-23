@@ -23,7 +23,9 @@ class Score: SKNode {
                             SKTexture(imageNamed: "7"),
                             SKTexture(imageNamed: "8"),
                             SKTexture(imageNamed: "9")]
-    
+}
+
+extension Score: GameObject {
     func setUp() {
         firstDigitOriginalXPosition = firstDigit?.position.x ?? 0
         firstDigit?.position.x = 0
@@ -41,5 +43,12 @@ class Score: SKNode {
             firstDigit?.texture = textures[score]
         }
         
+    }
+    
+    func changeState(to state: GameState) {
+        isHidden = state == .playing
+        if state == .ready {
+            score = 0
+        }
     }
 }

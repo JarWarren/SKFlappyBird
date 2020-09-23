@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EBCD035251ADA7800EAE987 /* SKScene+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCD034251ADA7800EAE987 /* SKScene+Extension.swift */; };
 		7EC572FB2518689000BE760C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC572FA2518689000BE760C /* AppDelegate.swift */; };
 		7EC572FD2518689000BE760C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7EC572FC2518689000BE760C /* GameScene.sks */; };
 		7EC573012518689000BE760C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC573002518689000BE760C /* GameScene.swift */; };
@@ -15,7 +16,7 @@
 		7EC573082518689100BE760C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC573072518689100BE760C /* Assets.xcassets */; };
 		7EC573112518690700BE760C /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 7EC573102518690700BE760C /* Audio */; };
 		7EC5732625186DB000BE760C /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5732525186DB000BE760C /* Pipe.swift */; };
-		7EC5732B25186E8F00BE760C /* Consatnts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5732A25186E8F00BE760C /* Consatnts.swift */; };
+		7EC5732B25186E8F00BE760C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5732A25186E8F00BE760C /* Constants.swift */; };
 		7EC5732F2518830400BE760C /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5732E2518830400BE760C /* Ground.swift */; };
 		7EC573342518890000BE760C /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC573332518890000BE760C /* Background.swift */; };
 		7EC5733925188B3700BE760C /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5733825188B3700BE760C /* Bird.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7EBCD034251ADA7800EAE987 /* SKScene+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+Extension.swift"; sourceTree = "<group>"; };
 		7EC572F72518689000BE760C /* FlappyBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC572FA2518689000BE760C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC572FC2518689000BE760C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -33,7 +35,7 @@
 		7EC573092518689100BE760C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EC573102518690700BE760C /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Audio; sourceTree = "<group>"; };
 		7EC5732525186DB000BE760C /* Pipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipe.swift; sourceTree = "<group>"; };
-		7EC5732A25186E8F00BE760C /* Consatnts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consatnts.swift; sourceTree = "<group>"; };
+		7EC5732A25186E8F00BE760C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7EC5732E2518830400BE760C /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		7EC573332518890000BE760C /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		7EC5733825188B3700BE760C /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
@@ -85,7 +87,8 @@
 				7EC573072518689100BE760C /* Assets.xcassets */,
 				7EC573102518690700BE760C /* Audio */,
 				7EC573092518689100BE760C /* Info.plist */,
-				7EC5732A25186E8F00BE760C /* Consatnts.swift */,
+				7EC5732A25186E8F00BE760C /* Constants.swift */,
+				7EBCD034251ADA7800EAE987 /* SKScene+Extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -225,8 +228,9 @@
 				7EC573342518890000BE760C /* Background.swift in Sources */,
 				7EC573012518689000BE760C /* GameScene.swift in Sources */,
 				7EC573032518689000BE760C /* GameViewController.swift in Sources */,
+				7EBCD035251ADA7800EAE987 /* SKScene+Extension.swift in Sources */,
 				7EC572FB2518689000BE760C /* AppDelegate.swift in Sources */,
-				7EC5732B25186E8F00BE760C /* Consatnts.swift in Sources */,
+				7EC5732B25186E8F00BE760C /* Constants.swift in Sources */,
 				7EC5733925188B3700BE760C /* Bird.swift in Sources */,
 				7EC5737525196A4F00BE760C /* Score.swift in Sources */,
 				7EC5732625186DB000BE760C /* Pipe.swift in Sources */,

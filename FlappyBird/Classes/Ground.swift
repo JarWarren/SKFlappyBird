@@ -8,11 +8,20 @@
 import SpriteKit
 
 class Ground: SKNode {
-
     private var segments = [SKSpriteNode]()
     private var leadSegment = 0
-    var shouldUpdate = true
+    private var shouldUpdate = true
     
+    private func updateLeadSegment() {
+        leadSegment += 1
+        if leadSegment > 2 {
+            leadSegment = 0
+        }
+    }
+    
+}
+
+extension Ground: GameObject {
     func setUp() {
         segments = [childNode(withName: "Segment0") as! SKSpriteNode,
                     childNode(withName: "Segment1") as! SKSpriteNode,
@@ -28,11 +37,7 @@ class Ground: SKNode {
         }
     }
     
-    private func updateLeadSegment() {
-        leadSegment += 1
-        if leadSegment > 2 {
-            leadSegment = 0
-        }
+    func changeState(to state: GameState) {
+        shouldUpdate = state != .gameOver
     }
-    
 }

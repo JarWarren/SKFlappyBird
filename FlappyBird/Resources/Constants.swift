@@ -1,5 +1,5 @@
 //
-//  Consatnts.swift
+//  Constants.swift
 //  FlappyBird
 //
 //  Created by Jared Warren on 9/20/20.

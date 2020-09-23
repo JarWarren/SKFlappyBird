@@ -12,13 +12,19 @@ protocol PipeDelegate: AnyObject {
 }
 
 class Pipe: SKNode {
-    
-    private weak var delegate: PipeDelegate?
     private var hasScored = false
-    var shouldUpdate = true
+    private var shouldUpdate = true
+    weak var delegate: PipeDelegate?
     
-    func setUp(delegate: PipeDelegate) {
-        self.delegate = delegate
+    private func reset() {
+        position.x += 1080
+        position.y = CGFloat.random(in: -80...240)
+        hasScored = false
+    }
+}
+
+extension Pipe: GameObject {
+    func setUp() {
         reset()
     }
 
@@ -36,9 +42,12 @@ class Pipe: SKNode {
         }
     }
     
-    private func reset() {
-        position.x += 1080
-        position.y = CGFloat.random(in: -80...240)
-        hasScored = false
+    func changeState(to state: GameState) {
+        if state == .playing {
+            reset()
+            shouldUpdate = true
+        } else {
+            shouldUpdate = false
+        }
     }
 }
