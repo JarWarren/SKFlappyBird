@@ -8,7 +8,7 @@ Ex. `SKScene.update()` calls `update()` on all of its children.
 
 * While the gameplay works great, there's an occasional bug with audio. `SKAction.playSoundFileNamed(_:waitForCompletion:)` was designed for simple sound effects. Sadly in practice I got unreliable results. Apparently other developers have been encountering this issue for years. A real project might use SKAudioNode or AVPlayer.
 
-* I don't have every asset from the original game. So no pause buttton or fancy medals after a game over.
+* I don't have every asset from the original game. So no pause button or fancy medals after a game over.
 
 ### Changes I would make for a bigger game
 * In a larger project I might have made GameObject a word-for-word copy of all SKScene callbacks. Here, it only has 3 functions - `setUp()`, `update()` and `changeState(to:)`.
