@@ -23,9 +23,9 @@ protocol GameObject: AnyObject {
 class GameScene: SKScene {
     
     private var onCooldown = false
-    private var collisionSound: SKAction { .playSoundFileNamed("hit.wav", waitForCompletion: false) }
-    private var scoreSound: SKAction { .playSoundFileNamed("point.wav", waitForCompletion: false) }
-    private var swooshSound: SKAction { .playSoundFileNamed("swoosh.wav", waitForCompletion: false) }
+    private var collisionSound: SKAction { .playSoundFileNamed(Constants.sounds.collision, waitForCompletion: false) }
+    private var scoreSound: SKAction { .playSoundFileNamed(Constants.sounds.score, waitForCompletion: false) }
+    private var swooshSound: SKAction { .playSoundFileNamed(Constants.sounds.swoosh, waitForCompletion: false) }
     private lazy var background = childNode(withName: "Background") as! Background
     private lazy var readyMessage = childNode(withName: "Message") as! SKSpriteNode
     private lazy var gameOverMessage = childNode(withName: "GameOver") as! SKSpriteNode
