@@ -17,8 +17,10 @@ class Pipe: SKNode {
     weak var delegate: PipeDelegate?
     
     private func reset() {
-        position.x += 1080
-        position.y = CGFloat.random(in: -80...240)
+        if position.x < Constants.gameplay.pipeLimitRight {
+            position.x += 1080
+        }
+        position.y = CGFloat.random(in: Constants.gameplay.pipeSafeRange)
         hasScored = false
     }
 }
@@ -30,14 +32,14 @@ extension Pipe: GameObject {
 
     func update() {
         guard shouldUpdate else { return }
-        position.x -= 4
+        position.x -= Constants.gameplay.gameSpeed
         
-        if !hasScored && position.x <= -160 {
+        if !hasScored && position.x <= Constants.gameplay.birdPosition {
             hasScored = true
             delegate?.pipeDidScore()
         }
         
-        if position.x <= -640 {
+        if position.x <= Constants.gameplay.pipeLimitLeft {
             reset()
         }
     }

@@ -9,8 +9,8 @@ import SpriteKit
 
 class Bird: SKSpriteNode {
 
-    private var flapSound: SKAction { .playSoundFileNamed("wing.wav", waitForCompletion: false) }
-    private var deathSound: SKAction { .playSoundFileNamed("die.wav", waitForCompletion: false) }
+    private var flapSound: SKAction { .playSoundFileNamed(Constants.sounds.flap, waitForCompletion: false) }
+    private var deathSound: SKAction { .playSoundFileNamed(Constants.sounds.death, waitForCompletion: false) }
     private var maximumUpwardVelocity: CGFloat = 18
     private var upwardVelocity: CGFloat = 0
     private var maximumAngularVelocity: CGFloat = 1
@@ -20,7 +20,7 @@ class Bird: SKSpriteNode {
     private var state: GameState = .ready
     
     func flap() {
-        guard isAlive else { return }
+        guard isAlive, position.y < Constants.gameplay.birdUpperLimit else { return }
         removeAllActions()
         upwardVelocity = maximumUpwardVelocity
         zRotation = 0.7

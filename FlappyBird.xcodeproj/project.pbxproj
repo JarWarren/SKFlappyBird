@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E04B6832526FF2900EA1A47 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E04B6822526FF2900EA1A47 /* Constants.swift */; };
 		7EBCD035251ADA7800EAE987 /* SKScene+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBCD034251ADA7800EAE987 /* SKScene+Extension.swift */; };
 		7EBCD04D251B173100EAE987 /* point.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCD048251B173000EAE987 /* point.wav */; };
 		7EBCD04E251B173100EAE987 /* hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7EBCD049251B173100EAE987 /* hit.wav */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E04B6822526FF2900EA1A47 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7EBCD034251ADA7800EAE987 /* SKScene+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+Extension.swift"; sourceTree = "<group>"; };
 		7EBCD048251B173000EAE987 /* point.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = point.wav; sourceTree = "<group>"; };
 		7EBCD049251B173100EAE987 /* hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hit.wav; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				7EBCD047251B171700EAE987 /* Audio */,
 				7EC572FA2518689000BE760C /* AppDelegate.swift */,
 				7EC573072518689100BE760C /* Assets.xcassets */,
+				7E04B6822526FF2900EA1A47 /* Constants.swift */,
 				7EC573092518689100BE760C /* Info.plist */,
 				7EBCD053251B177500EAE987 /* Launch.storyboard */,
 			);
@@ -246,6 +249,7 @@
 				7EC573012518689000BE760C /* GameScene.swift in Sources */,
 				7EC573032518689000BE760C /* GameViewController.swift in Sources */,
 				7EBCD035251ADA7800EAE987 /* SKScene+Extension.swift in Sources */,
+				7E04B6832526FF2900EA1A47 /* Constants.swift in Sources */,
 				7EC572FB2518689000BE760C /* AppDelegate.swift in Sources */,
 				7EC5733925188B3700BE760C /* Bird.swift in Sources */,
 				7EC5737525196A4F00BE760C /* Score.swift in Sources */,

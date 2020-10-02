@@ -30,7 +30,7 @@ extension Ground: GameObject {
     
     func update() {
         guard shouldUpdate else { return }
-        segments.forEach { $0.position.x -= 4 }
+        segments.forEach { $0.position.x -= Constants.gameplay.gameSpeed }
         if segments[leadSegment].position.x <= -820 {
             segments[leadSegment].position.x += segments[leadSegment].size.width * 3
             updateLeadSegment()
