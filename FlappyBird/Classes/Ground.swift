@@ -26,6 +26,7 @@ extension Ground: GameObject {
         segments = [childNode(withName: "Segment0") as! SKSpriteNode,
                     childNode(withName: "Segment1") as! SKSpriteNode,
                     childNode(withName: "Segment2") as! SKSpriteNode]
+		segments.forEach { $0.texture?.filteringMode = .nearest }
     }
     
     func update() {

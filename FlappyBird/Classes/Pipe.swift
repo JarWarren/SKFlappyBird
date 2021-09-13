@@ -28,6 +28,7 @@ class Pipe: SKNode {
 extension Pipe: GameObject {
     func setUp() {
         reset()
+		(self as? SKSpriteNode)?.texture?.filteringMode = .nearest
     }
 
     func update() {

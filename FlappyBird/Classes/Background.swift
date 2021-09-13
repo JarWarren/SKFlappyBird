@@ -13,5 +13,6 @@ class Background: SKSpriteNode {
         var textureName = "background-"
         textureName += Bool.random() ? "day" : "night"
         self.texture = SKTexture(imageNamed: textureName)
+		self.texture?.filteringMode = .nearest
     }
 }
