@@ -29,6 +29,7 @@ extension Score: GameObject {
         isHidden = true
         firstDigit?.position.x = 0
         secondDigit?.isHidden = true
+		textures.forEach { $0.filteringMode = .nearest }
     }
     
     func update() {

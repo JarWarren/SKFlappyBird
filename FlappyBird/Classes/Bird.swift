@@ -48,6 +48,7 @@ extension Bird: GameObject {
         textures = [SKTexture(imageNamed: color + "bird-upflap"),
                     SKTexture(imageNamed: color + "bird-midflap"),
                     SKTexture(imageNamed: color + "bird-downflap")]
+		textures.forEach { $0.filteringMode = .nearest }
         texture = textures[1]
         fly()
     }
