@@ -60,7 +60,6 @@ class GameScene: SKScene {
         case .ready:
             gameState = .playing
         case .playing:
-            physicsWorld.contactDelegate = self
             bird.flap()
         case .gameOver:
             gameState = .ready
@@ -74,6 +73,7 @@ class GameScene: SKScene {
     }
     
     private func readyGame() {
+        physicsWorld.contactDelegate = self
         run(swooshSound)
         readyMessage.isHidden = false
         gameOverMessage.isHidden = true

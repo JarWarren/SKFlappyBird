@@ -11,7 +11,7 @@ protocol PipeDelegate: AnyObject {
     func pipeDidScore()
 }
 
-class Pipe: SKNode {
+class Pipe: SKSpriteNode {
     private var hasScored = false
     private var shouldUpdate = false
     weak var delegate: PipeDelegate?
@@ -28,7 +28,7 @@ class Pipe: SKNode {
 extension Pipe: GameObject {
     func setUp() {
         reset()
-		(self as? SKSpriteNode)?.texture?.filteringMode = .nearest
+		texture?.filteringMode = .nearest
     }
 
     func update() {
